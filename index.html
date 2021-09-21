@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stiles.css">
+    <script defer src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <form action="" onsubmit="searchPokemon(event)">
+
+        <input type="text" name="pokemon" autocomplete="off">
+
+    </form>
+
+    <div id="poke-card" class="poke-card">
+
+        <div id="poke-name">Pokédex</div>
+
+        <div id="poke-img-container" class="img-container">
+
+            <img src="img/poke-shadow.png" alt="imagen de pokemon" id="poke-img" class="poke-img">
+
+        </div>
+
+        <div id="poke-id"></div>
+        <div id="poke-types" class="poke-types"></div>
+        <div id="poke-stats" class="poke-stats"></div>
+
+    </div>
+
+</body>
+</html>
