@@ -14,7 +14,7 @@
 
     <form action="" onsubmit="searchPokemon(event)">
 
-        <input type="text" name="pokemon" autocomplete="off">
+        <input type="text" name="pokemon" autocomplete="off" placeholder="Buscar pokémon..">
 
     </form>
 
@@ -31,7 +31,13 @@
         <div id="poke-id"></div>
         <div id="poke-types" class="poke-types"></div>
         <div id="poke-stats" class="poke-stats"></div>
-
+        <div class="container-buttons">
+            <button id="poke-shiny" class="poke-shiny">Shiny</button>
+                <div>
+                    <button id="poke-male" class="poke-male">Default</button>
+                    <button id="poke-back" class="poke-female">Back</button>
+                </div>
+        </div>
     </div>
 
 </body>

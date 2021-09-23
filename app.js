@@ -5,6 +5,9 @@ const pokeImg = document.querySelector("#poke-img")
 const pokeId = document.querySelector("#poke-id")
 const pokeTypes = document.querySelector("#poke-types")
 const pokeStats = document.querySelector("#poke-stats")
+const pokeShiny = document.querySelector("#poke-shiny")
+const pokeMale = document.querySelector("#poke-male")
+const pokeBack = document.querySelector("#poke-back")
 
 const typeColors = {
     electric: '#FFEA70',
@@ -31,6 +34,17 @@ const searchPokemon = event => {
     const {value} = event.target.pokemon;
     $.get(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`, (res) => {
         renderPokemonData(res)
+
+        pokeShiny.onclick = () => {
+            pokeImg.setAttribute("src", res.sprites.front_shiny)
+        }
+        pokeMale.onclick = () => {
+            pokeImg.setAttribute("src", res.sprites.front_default)
+        }
+        pokeBack.onclick = () => {
+            pokeImg.setAttribute("src", res.sprites.back_default)
+        }
+
     })
 }
 
